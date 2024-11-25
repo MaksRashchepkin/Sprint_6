@@ -7,7 +7,7 @@ class Users:
         'comment': 'Позвонить за час'
     }
 
-    user_main = {
+    user_footer = {
         'name': 'Петр',
         'last_name': 'Сидоров',
         'address': 'улица Юбилейная',
@@ -15,8 +15,8 @@ class Users:
         'comment': ''
     }
 
-class HomePageFAQ:
-    answers = [
+class MainPageQuestions:
+    questions = [
         (0, 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'),
         (1, 'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.'),
         (2, 'Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.'),
@@ -28,5 +28,5 @@ class HomePageFAQ:
     ]
 
 class Url:
-    scooter_home_page = 'https://qa-scooter.praktikum-services.ru/'
-    zen_home_page = 'https://dzen.ru/?yredirect=true'
+    scooter_main_page = 'https://qa-scooter.praktikum-services.ru/'
+    dzen_main_page = 'https://dzen.ru/?yredirect=true'
