@@ -1,6 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
+
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
@@ -14,7 +15,7 @@ class BasePage:
     def get_text(self, locator):
         return self.driver.find_element(*locator).text
 
-    def send_keys(self, locator):
+    def send_keys(self, locator, value):
         self.driver.find_element(*locator).send_keys(value)
 
     def cross_url(self, url):

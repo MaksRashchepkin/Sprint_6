@@ -9,9 +9,9 @@ class OrderPageLocators:
     phone_field = [By.XPATH, ".//input[@placeholder='* Телефон: на него позвонит курьер']"]  # Поле ввода Телефон: на него позвонит курьер
     next_button = [By.XPATH, "button[@text='Далее']"] # Кнопка Далее
     date_field = [By.XPATH, ".//input[@placeholder='* Когда привезти самокат']"] # Поле Когда привезти самокат
-    choose_date = [By.XPATH, ".//div[@class='react-datepicker__day react-datepicker__day--029 react-datepicker__day--selected']"] # Дата
+    date = [By.XPATH, ".//div[@class='react-datepicker__day react-datepicker__day--029 react-datepicker__day--selected']"] # Дата
     period_filed = [By.XPATH, ".//div[@class='Dropdown-placeholder']"] # Поле ввода Срок аренды
-    choose_period = [By.XPATH, ".//div[@class='Dropdown-placeholder is-selected' and text()='сутки']"] # Период сутки
+    period = [By.XPATH, ".//div[@class='Dropdown-placeholder is-selected' and text()='сутки']"] # Период сутки
     color_black = [By.XPATH, ".//label[@for='black']"] # Черный цвет
     comment_field = [By.XPATH, ".//input[@placeholder='Комментарий для курьера']"]  # Поле ввода Комментарий для курьера
     order_button = [By.XPATH, ".//button[@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Заказать']"] # Кнопка заказать
