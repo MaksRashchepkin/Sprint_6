@@ -16,11 +16,11 @@ class TestOrderPage:
         assert 'Заказ оформлен' in order_page.check_success_order()
 
     @allure.title('Проверка оформления заказа через кнопку Заказать в футере')
-    def test_create_order_footer_button(self, driver):
+    def test_create_order_middle_button(self, driver):
         main_page = MainPage(driver)
         main_page.open_scooter_main_page()
         order_page = OrderPage(driver)
         main_page.accept_cookies()
-        main_page.click_footer_order_button()
-        order_page.create_order(Users.user_footer)
+        main_page.click_middle_order_button()
+        order_page.create_order(Users.user_middle)
         assert 'Заказ оформлен' in order_page.check_success_order()

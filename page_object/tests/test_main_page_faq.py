@@ -1,13 +1,13 @@
 from conftest import driver
 from page_object.pages.main_page import MainPage
-from data import MainPageQuestions
+from data import MainPageFAQ
 import pytest
 import allure
 
-class TestAnswers:
+class TestMainPageFAQ:
     @allure.title('Проверка соответствия вопроса и ответа из выпадающего списка Вопросы о важном')
-    @pytest.mark.parametrize('number, answer', MainPageQuestions.answers)
-    def test_answers(self, driver, number, answer):
+    @pytest.mark.parametrize('number, answer', MainPageFAQ.answers)
+    def test_main_page_faq(self, driver, number, answer):
         main_page = MainPage(driver)
         main_page.open_scooter_main_page()
         main_page.accept_cookies()

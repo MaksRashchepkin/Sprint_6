@@ -9,7 +9,7 @@ class OrderPage(BasePage):
 
     @allure.step('Заполнить поле Фамилия')
     def set_last_name(self, last_name):
-        self.send_keys(OrderPageLocators.family_field, last_name)
+        self.send_keys(OrderPageLocators.last_name_field, last_name)
 
     @allure.step('Заполнить поле Адрес: куда привезти заказ')
     def set_address(self, address):
@@ -56,7 +56,7 @@ class OrderPage(BasePage):
 
     @allure.step('Проверить появления окна Заказ оформлен')
     def check_success_order(self):
-        return self.get_text(OrderPageLocators.order_success)
+        return self.get_text(OrderPageLocators.screen_order_success)
 
     @allure.step('Оформить заказ')
     def create_order(self, user):

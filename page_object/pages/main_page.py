@@ -9,8 +9,8 @@ class MainPage(BasePage):
         self.click_on_element(MainPageLocators.header_order_button)
 
     @allure.step('Нажать на кнопку Заказать в футере')
-    def click_footer_order_button(self):
-        self.click_on_element(MainPageLocators.footer_order_button)
+    def click_middle_order_button(self):
+        self.click_on_element(MainPageLocators.middle_order_button)
 
     @allure.step('Нажать на вопрос')
     def click_question(self, number):
@@ -36,6 +36,22 @@ class MainPage(BasePage):
     @allure.step('Найти последний вопрос')
     def find_last_question(self):
         self.find_element(MainPageLocators.last_question)
+
+    @allure.step('Нажать на лого Яндекс')
+    def click_yandex_logo(self):
+        self.click_on_element(MainPageLocators.logo_yandex)
+
+    @allure.step('Нажать на лого Самокат')
+    def click_scooter_logo(self):
+        self.click_on_element(MainPageLocators.logo_scooter)
+
+    @allure.step('Проверить URL Яндекс Самокат')
+    def check_switch_scooter_page(self):
+        self.cross_url(Url.scooter_main_page)
+
+    @allure.step('Проверить URL Дзен')
+    def check_switch_dzen_page(self):
+        self.cross_url(Url.dzen_main_page)
 
 
 
