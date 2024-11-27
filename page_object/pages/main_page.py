@@ -18,11 +18,18 @@ class MainPage(BasePage):
         locator = locator.format(number)
         return self.click_on_element((method, locator))
 
+    # @allure.step('Получить текст ответа на вопрос')
+    # def get_answer(self, number):
+        # method, locator = MainPageLocators.answer
+        # locator = locator.format(number)
+        # return self.get_text((method, locator))
+
     @allure.step('Получить текст ответа на вопрос')
-    def get_answer(self, number):
-        method, locator = MainPageLocators.answer
-        locator = locator.format(number)
-        return self.get_text((method, locator))
+    def get_answer_text(self, number):
+        locator_q_formatted = self.format_locators(MainPageLocators.question, number)
+        locator_a_formatted = self.format_locators(MainPageLocators.answer, number)
+        self.click_on_element(locator_q_formatted)
+        return self.get_text(locator_a_formatted)
 
     @allure.step('Открыть главную страницу Яндекс Самокат')
     def open_scooter_main_page(self):
