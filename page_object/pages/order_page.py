@@ -17,8 +17,8 @@ class OrderPage(BasePage):
 
     @allure.step('Выбрать станцию метро')
     def set_metro(self, metro_station):
-        self.click_on_element(OrderPageLocators.metro_field)
-        self.click_on_element(metro_station)
+        self.click_on_element_with_wait(OrderPageLocators.metro_field)
+        self.click_on_element_with_wait(OrderPageLocators.metro_station)
 
     @allure.step('Заполнить поле Телефон: на него позвонит курьер')
     def set_phone(self, phone):
@@ -26,21 +26,21 @@ class OrderPage(BasePage):
 
     @allure.step('Нажать кнопку Далее')
     def click_next_button(self):
-        self.click_on_element(OrderPageLocators.next_button)
+        self.click_on_element_with_wait(OrderPageLocators.next_button)
 
     @allure.step('Выбрать дату доставки')
     def set_date(self, date):
-        self.click_on_element(OrderPageLocators.date_field)
-        self.click_on_element(date)
+        self.click_on_element_with_wait(OrderPageLocators.date_field)
+        self.click_on_element_with_wait(OrderPageLocators.date)
 
     @allure.step('Выбрать срок аренды')
     def set_period(self, period):
-        self.click_on_element(OrderPageLocators.period_filed)
-        self.click_on_element(period)
+        self.click_on_element_with_wait(OrderPageLocators.period_filed)
+        self.click_on_element_with_wait(OrderPageLocators.period)
 
     @allure.step('Выбрать цвет')
     def set_color(self, color):
-        self.click_on_element(color)
+        self.click_on_element_with_wait(OrderPageLocators.color)
 
     @allure.step('Заполнить поле Комментарий для курьера')
     def set_comment(self, comment):
@@ -48,15 +48,15 @@ class OrderPage(BasePage):
 
     @allure.step('Нажать на кнопку Заказать')
     def click_order_button(self):
-        self.click_on_element(OrderPageLocators.order_button)
+        self.click_on_element_with_wait(OrderPageLocators.order_button)
 
     @allure.step('Нажать на кнопку Да')
     def click_order_yes(self):
-        self.click_on_element(OrderPageLocators.yes_button)
+        self.click_on_element_with_wait(OrderPageLocators.yes_button)
 
     @allure.step('Проверить появления окна Заказ оформлен')
     def check_success_order(self):
-        return self.get_text(OrderPageLocators.screen_order_success)
+        return self.find_element_with_wait(OrderPageLocators.screen_order_success)
 
     @allure.step('Оформить заказ')
     def create_order(self, user):
@@ -72,12 +72,3 @@ class OrderPage(BasePage):
         self.set_comment(user['comment'])
         self.click_order_button()
         self.click_order_yes()
-
-
-
-
-
-
-
-
-
