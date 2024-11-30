@@ -55,14 +55,14 @@ class OrderScooterPage(BasePage):
         self.click_on_element(PageOrderLocators.BUTTON_YES)
 
 
-    def click_on_logo_scooter(self):
+    #def click_on_logo_scooter(self):
         self.click_on_element(PageOrderLocators.BUTTON_HEADER_SCOOTER)
 
-    def click_on_logo_dzen(self):
+    #def click_on_logo_dzen(self):
         self.click_on_element(PageOrderLocators.BUTTON_HEADER_DZEN)
 
-    def click_on_look_at_status(self):
+    #def click_on_look_at_status(self):
         self.click_on_element(PageOrderLocators.BUTTON_LOOK_AT_STATUS)
 
-    def assert_field_yandex(self):
+    #def assert_field_yandex(self):
         self.find_element_with_wait(PageOrderLocators.SEARCH_YANDEX_FIELD)

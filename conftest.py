@@ -1,12 +1,13 @@
-
-import pytest
+from selenium.webdriver.common.by import By
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+import pytest
+
 
 @pytest.fixture
-
 def driver():
     driver = webdriver.Firefox()
-    driver.set_window_size(1920, 1080)
+    driver.maximize_window()
+    driver.get('https://qa-scooter.praktikum-services.ru/')
+    driver.find_element(By.ID, "rcc-confirm-button").click()
     yield driver
     driver.quit()

@@ -1,8 +1,4 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
-
 
 class PageOrderLocators:
     NANE_FIELD = (By.XPATH, "//input[@placeholder= '* Имя']")
@@ -17,10 +13,10 @@ class PageOrderLocators:
     BUTTON_YES = (By.XPATH, "//button[contains(@class, 'Button_Middle') and text() = 'Да']")
     BUTTON_ORDER = (By.XPATH, './/button[text()="Заказать"]')
     ASSERT_CHECK_TEXT_ORDER_COMPLETE = (By.XPATH, "//div[contains(@class, 'Order_ModalHeader')]")
-    BUTTON_HEADER_SCOOTER = (By.XPATH, "//img[@alt='Scooter']")
-    BUTTON_HEADER_DZEN = (By.XPATH, "//img[@alt='Yandex']")
-    BUTTON_LOOK_AT_STATUS = (By.XPATH, "//*[text() = 'Посмотреть статус']")
-    SEARCH_YANDEX_FIELD = (By.XPATH, "//a[contains(@class, 'dzen-layout--desktop-base-header__logo')]")
+    #BUTTON_HEADER_SCOOTER = (By.XPATH, "//img[@alt='Scooter']")
+    #BUTTON_HEADER_DZEN = (By.XPATH, "//img[@alt='Yandex']")
+    #BUTTON_LOOK_AT_STATUS = (By.XPATH, "//*[text() = 'Посмотреть статус']")
+    #SEARCH_YANDEX_FIELD = (By.XPATH, "//a[contains(@class, 'dzen-layout--desktop-base-header__logo')]")
 
     @staticmethod
     def metro_locator(metro):

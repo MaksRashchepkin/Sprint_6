@@ -1,13 +1,7 @@
 import pytest
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
 from conftest import driver
 from locators.locators_page_order_scroller import PageOrderLocators
 import time
-
 from pages.page_order_scooter import OrderScooterPage
 from urls import UrelsSamokati
 
