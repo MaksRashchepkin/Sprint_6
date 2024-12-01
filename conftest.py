@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 import pytest
 
-
 @pytest.fixture
 def driver():
     driver = webdriver.Firefox()

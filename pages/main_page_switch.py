@@ -4,19 +4,18 @@ import allure
 from data import Url
 
 class MainPageSwitchPage(BasePage):
-    @allure.step('Нажать на лого Самокат')
+    @allure.step('Нажать на лого Самокат') #OK
     def click_on_logo_scooter(self):
-        self.click_on_element(MainPageSwitchLocators.button_header_scooter)
+        self.click_on_element(MainPageSwitchLocators.logo_header_scooter)
 
-    @allure.step('Нажать на лого Яндекс')
+    @allure.step('Нажать на лого Яндекс') #OK
     def click_on_logo_yandex(self):
-        self.click_on_element(MainPageSwitchLocators.button_header_yandex)
+        self.click_on_element(MainPageSwitchLocators.logo_header_yandex)
 
-    @allure.step('Проверить URL Яндекс Самокат')
+    @allure.step('Проверить URL Яндекс Самокат') #OK
     def check_switch_scooter_page(self):
         self.cross_url(Url.scooter_main_page)
 
-    @allure.step('Проверить URL Дзен')
+    @allure.step('Проверить URL Дзен') #OK
     def check_switch_dzen_page(self):
         self.cross_url(Url.dzen_main_page)
-

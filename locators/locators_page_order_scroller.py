@@ -1,30 +1,27 @@
 from selenium.webdriver.common.by import By
 
 class PageOrderLocators:
-    NANE_FIELD = (By.XPATH, "//input[@placeholder= '* Имя']")
-    SURNAME_FIELD = (By.XPATH, "//input[@placeholder= '* Фамилия']")
-    ADDRESS_FIELD = (By.XPATH, "//input[@placeholder= '* Адрес: куда привезти заказ']")
-    METRO_FIELD = (By.XPATH, "//input[@placeholder= '* Станция метро']")
-    TELEPHONE_FIELD = (By.XPATH, "//input[@placeholder= '* Телефон: на него позвонит курьер']")
-    BUTTON_ENTER = (By.XPATH, "//button[text() = 'Далее']")
-    WHEN_NEED_SCOOTER_FIELD = (By.XPATH, "//input[@placeholder= '* Когда привезти самокат']")
-    DROP_DAWN_RENTAL = (By.XPATH, "//*[text() = '* Срок аренды']")
-    COMMENT = (By.XPATH, "//input[@placeholder= 'Комментарий для курьера']")
-    BUTTON_YES = (By.XPATH, "//button[contains(@class, 'Button_Middle') and text() = 'Да']")
-    BUTTON_ORDER = (By.XPATH, './/button[text()="Заказать"]')
-    ASSERT_CHECK_TEXT_ORDER_COMPLETE = (By.XPATH, "//div[contains(@class, 'Order_ModalHeader')]")
-    #BUTTON_HEADER_SCOOTER = (By.XPATH, "//img[@alt='Scooter']")
-    #BUTTON_HEADER_DZEN = (By.XPATH, "//img[@alt='Yandex']")
-    #BUTTON_LOOK_AT_STATUS = (By.XPATH, "//*[text() = 'Посмотреть статус']")
-    #SEARCH_YANDEX_FIELD = (By.XPATH, "//a[contains(@class, 'dzen-layout--desktop-base-header__logo')]")
+    name_field = (By.XPATH, "//input[@placeholder= '* Имя']")
+    surname_field = (By.XPATH, "//input[@placeholder= '* Фамилия']")
+    address_field = (By.XPATH, "//input[@placeholder= '* Адрес: куда привезти заказ']")
+    metro_field = (By.XPATH, "//input[@placeholder= '* Станция метро']")
+    telephone_filed = (By.XPATH, "//input[@placeholder= '* Телефон: на него позвонит курьер']")
+    button_further = (By.XPATH, "//button[text() = 'Далее']")
+    when_need_scooter_field = (By.XPATH, "//input[@placeholder= '* Когда привезти самокат']")
+    drop_dawn_rental = (By.XPATH, "//*[text() = '* Срок аренды']")
+    comment = (By.XPATH, "//input[@placeholder= 'Комментарий для курьера']")
+    button_order = (By.XPATH, ".//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']")
+    screen_want_set_order = (By.XPATH, ".//div[@class='Order_ModalHeader__3FDaJ' and text()='Хотите оформить заказ?']")
+    button_yes = (By.XPATH, "//button[contains(@class, 'Button_Middle') and text() = 'Да']")
+    screen_order_complete = (By.XPATH, ".//div[@class='Order_ModalHeader__3FDaJ' and text()='Заказ оформлен']")
 
     @staticmethod
     def metro_locator(metro):
         return By.XPATH, f"//*[contains(text(), '{metro[0]}')]"
 
     @staticmethod
-    def check_box_collor_locator(check_box_color):
-        return By.ID, f"{check_box_color[0]}"
+    def check_box_colour_locator(check_box_colour):
+        return By.ID, f"{check_box_colour[0]}"
 
     @staticmethod
     def rent_time_locator(the_rental_period):
