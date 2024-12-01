@@ -1,28 +1,28 @@
-from locators.locators_page_order_scroller import PageOrderLocators
+from locators.locators_page_order_scooter import PageOrderLocators
 from pages.base_page import BasePage
 import allure
 
 class OrderScooterPage(BasePage):
     @allure.step('Заполнить поле "Имя"')
-    def enter_name(self, name): #OK
+    def enter_name(self, name):
         self.add_text_to_element(PageOrderLocators.name_field, name)
 
     @allure.step('Заполнить поле "Фамилия"')
-    def enter_surname(self, surname): #OK
+    def enter_surname(self, surname):
         self.add_text_to_element(PageOrderLocators.surname_field, surname)
 
     @allure.step('Заполнить поле "Адрес: куда привезти заказ"')
-    def enter_address(self, address): #OK
+    def enter_address(self, address):
         self.add_text_to_element(PageOrderLocators.address_field, address)
 
     @allure.step('Выбрать станцию метро')
-    def enter_metro(self, metro): #OK
+    def enter_metro(self, metro):
         locator_metro = PageOrderLocators.metro_locator(metro)
         self.add_text_to_element(PageOrderLocators.metro_field, metro)
         self.click_on_element(locator_metro)
 
     @allure.step('Заполнить поле "Телефон: на него позвонит курьер"')
-    def enter_telephone(self, telephone): #OK
+    def enter_telephone(self, telephone):
         self.add_text_to_element(PageOrderLocators.telephone_filed, telephone)
 
     @allure.step('Нажать на кнопку "Далее"')
