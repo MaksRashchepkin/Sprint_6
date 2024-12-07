@@ -10,10 +10,13 @@ class PageOrderLocators:
     when_need_scooter_field = (By.XPATH, "//input[@placeholder= '* Когда привезти самокат']")
     drop_dawn_rental = (By.XPATH, "//*[text() = '* Срок аренды']")
     comment = (By.XPATH, "//input[@placeholder= 'Комментарий для курьера']")
-    button_order = (By.XPATH, ".//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']")
-    screen_want_set_order = (By.XPATH, ".//div[@class='Order_ModalHeader__3FDaJ' and text()='Хотите оформить заказ?']")
+    button_order = (By.XPATH, "//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']")
+    screen_want_set_order = (By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ' and text()='Хотите оформить заказ?']")
     button_yes = (By.XPATH, "//button[contains(@class, 'Button_Middle') and text() = 'Да']")
-    screen_order_complete = (By.XPATH, ".//div[@class='Order_ModalHeader__3FDaJ' and text()='Заказ оформлен']")
+    screen_order_complete = (By.XPATH, "//div[@class='Order_Modal__YZ-d3']")
+    text_order_complete = (By.XPATH, "//div[@class='Order_Text__2broi']")
+    # text_order_complete = (By.XPATH, "//div[@class='Order_Modal__YZ-d3']/div[@class='Order_ModalHeader__3FDaJ']")
+    # text_order_complete = (By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ' and text()='Заказ оформлен']")
 
     @staticmethod
     def metro_locator(metro):

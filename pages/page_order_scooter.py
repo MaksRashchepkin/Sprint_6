@@ -61,5 +61,25 @@ class OrderScooterPage(BasePage):
         self.click_on_element(PageOrderLocators.button_yes)
 
     @allure.step('Всплывающее окно "Заказ оформлен"')
-    def check_screen_set_order_complete(self):
-        self.find_element_with_wait(PageOrderLocators.screen_order_complete)
+    def check_success_order(self):
+        self.find_element(PageOrderLocators.screen_order_complete)
+
+    @allure.step('Во всплывающем окне "Заказ оформлен" отображается фраза "Номер заказа: "')
+    def check_text_order_complete(self):
+        return self.get_text(PageOrderLocators.text_order_complete)
+
+    def create_order(self, name, surname, address, metro, telephone, when_scooter, the_rental_period, check_box_colour, comment):
+        self.enter_name(name)
+        self.enter_surname(surname)
+        self.enter_address(address)
+        self.enter_metro(metro)
+        self.enter_telephone(telephone)
+        self.click_on_button_enter_first_page_order()
+        self.enter_when_scooter(when_scooter)
+        self.enter_when_check_box_colour(check_box_colour)
+        self.enter_the_rental_period(the_rental_period)
+        self.enter_comment(comment)
+        self.click_on_button_order()
+        self.check_screen_want_set_order()
+        self.click_on_button_yes_or_not()
+        self.check_success_order()

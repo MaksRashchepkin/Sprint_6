@@ -8,16 +8,20 @@ class BasePage:
     def enter_the_page(self, url):
         self.driver.get(url)
 
+    def find_element(self, locator):
+        self.driver.find_element(*locator)
+
     def find_element_with_wait(self, locator):
-        WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(locator))
+        WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 
     def click_on_element(self, locator):
         self.find_element_with_wait(locator).click()
 
     def get_text(self, locator):
-        element = WebDriverWait(self.driver, 3).until(expected_conditions.presence_of_element_located(locator))
-        return element.text
+        return self.find_element_with_wait(locator).text
+        # element = WebDriverWait(self.driver, 3).until(expected_conditions.presence_of_element_located(locator))
+        # return element.text
 
     def add_text_to_element(self, locator, text):
         self.find_element_with_wait(locator).send_keys(text)
