@@ -6,3 +6,4 @@ class MainPageLocators:
     last_question = (By.XPATH, "//*[@id='accordion__heading-7']")
     header_order_button = (By.XPATH, ".//div[contains(@class, 'Header_Nav')]/button[text()='Заказать']")
     page_order_button = (By.XPATH, ".//div[contains(@class, 'Home_FinishButton')]/button[text()='Заказать']")
+    cookies_button = (By.ID, "rcc-confirm-button")

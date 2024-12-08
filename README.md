@@ -9,6 +9,7 @@ class UserTwo - валидные данные пользователя два
 
 conftest.py - фикстура:
 def driver - настройки драйвера
+def cookies - открыть главную страницу Самокат, принять куки
 
 tests - сценарии, покрытые тестами:
 test_main_page_question.py
