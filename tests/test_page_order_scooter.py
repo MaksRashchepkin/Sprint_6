@@ -1,11 +1,9 @@
 import allure
 import pytest
 from conftest import driver
-from locators.locators_page_order_scooter import PageOrderLocators
 from pages.page_order_scooter import OrderScooterPage
 from pages.main_page import MainPage
 from data import UserOne, UserTwo
-
 
 class TestPageOrder:
     @allure.title('Проверка оформления заказа через кнопку "Заказать" в хедере')

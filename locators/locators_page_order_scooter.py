@@ -15,8 +15,6 @@ class PageOrderLocators:
     button_yes = (By.XPATH, "//button[contains(@class, 'Button_Middle') and text() = 'Да']")
     screen_order_complete = (By.XPATH, "//div[@class='Order_Modal__YZ-d3']")
     text_order_complete = (By.XPATH, "//div[@class='Order_Text__2broi']")
-    # text_order_complete = (By.XPATH, "//div[@class='Order_Modal__YZ-d3']/div[@class='Order_ModalHeader__3FDaJ']")
-    # text_order_complete = (By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ' and text()='Заказ оформлен']")
 
     @staticmethod
     def metro_locator(metro):
